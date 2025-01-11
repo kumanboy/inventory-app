@@ -24,7 +24,9 @@
     "react-redux": "^9.1.2",
     "recharts": "^2.12.7",
     "redux-persist": "^6.0.0",
-    "uuid": "^10.0.0"
+    "uuid": "^10.0.0",
+    "@react-buddy/ide-toolbox-next": "^2.4.1",
+    "@react-buddy/palette-mui": "^5.0.1"
   },
   "devDependencies": {
     "@types/node": "^20.14.10",
