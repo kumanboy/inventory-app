@@ -18,7 +18,6 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
             document.documentElement.classList.add("light");
         }
     });
-
     return (
         <div
             className={`${
