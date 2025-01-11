@@ -1,7 +1,16 @@
 "use client"
 
 import React from 'react'
-import {LucideIcon, Menu} from "lucide-react";
+import {
+    Warehouse,
+    CircleDollarSign,
+    ShoppingCart,
+    Layout,
+    LucideIcon,
+    Menu,
+    Cog,
+    User
+} from "lucide-react";
 import {useAppDispatch, useAppSelector} from "@/app/redux";
 import {setIsSidebarCollapsed} from "@/state";
 import {usePathname} from "next/navigation";
@@ -91,10 +100,45 @@ const Sidebar = () => {
             </div>
             {/*    Links*/}
             <div className={`flex-grow mt-8`}>
-                {/*    linklar boladi*/}
+                <SidebarLink
+                    href="/dashboard"
+                    icon={Layout}
+                    label="Dashboard"
+                    isCollapsed={isSidebarCollapsed}
+                />
+                <SidebarLink
+                    href="/inventory"
+                    icon={Warehouse}
+                    label="Inventory"
+                    isCollapsed={isSidebarCollapsed}
+                />
+                <SidebarLink
+                    href="/products"
+                    icon={ShoppingCart}
+                    label="Mahsulotlar"
+                    isCollapsed={isSidebarCollapsed}
+                />
+                <SidebarLink
+                    href="/users"
+                    icon={User}
+                    label="Users"
+                    isCollapsed={isSidebarCollapsed}
+                />
+                <SidebarLink
+                    href="/settings"
+                    icon={Cog}
+                    label="Sozlama"
+                    isCollapsed={isSidebarCollapsed}
+                />
+                <SidebarLink
+                    href="/expenses"
+                    icon={CircleDollarSign}
+                    label="Xarajatlar"
+                    isCollapsed={isSidebarCollapsed}
+                />
             </div>
             {/*Footer*/}
-            <div>
+            <div className={`${isSidebarCollapsed ? "hidden" : "block"} mb-10`}>
                 <p className={`text-center text-xs text-gray-500`}>&copy; 2025 Admin Panel</p>
             </div>
         </div>
